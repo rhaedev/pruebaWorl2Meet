@@ -1,0 +1,27 @@
+<p>heroes-detail works!</p>
+
+<form [formGroup]="createForm" (ngSubmit)="createOrEdit()">
+  <mat-form-field appearance="outline">
+    <mat-label>Nombre</mat-label>
+    <input
+      matInput
+      placeholder="Nombre"
+      formControlName="name"
+      id="name"
+      required
+    />
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Familia</mat-label>
+    <mat-select placeholder="Familia" formControlName="family" id="family" required>
+      <mat-option *ngFor="let family of families" value="family">{{ family }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Tipo</mat-label>
+    <mat-select placeholder="Tipo" formControlName="type" id="type" required>
+      <mat-option *ngFor="let type of types" value="type">{{ type }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <button mat-raised-button color="primary" [disabled]="!createForm.valid">Crear</button>
+</form>
