@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Hero } from 'src/app/shared/models/hero';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -39,18 +39,19 @@ export class HeroService {
     );
   }
 
-  create(name: string) {
+  create(hero: Hero) {
+    console.log("🚀 ~ file: hero.service.ts ~ line 43 ~ HeroService ~ create ~ hero", hero)
     return this.http
-      .post(this.heroesUrl, JSON.stringify({ name: name }), {
+      .post(this.heroesUrl, hero, {
         headers: this.headers,
       })
       .pipe(map((res: any) => res as Hero));
-  }
+  } 
 
   update(hero: Hero) {
     const url = `${this.heroesUrl}/${hero.id}`;
     return this.http
-      .put(url, JSON.stringify(hero), { headers: this.headers })
+      .put(url, hero, { headers: this.headers })
       .pipe(map(() => hero));
   }
 }
