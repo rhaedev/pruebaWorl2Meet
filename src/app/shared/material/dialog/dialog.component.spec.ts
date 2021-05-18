@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { DialogConfirmComponent } from './dialog-confirm.component';
+import { DialogConfirmComponent } from './dialog.component';
 
 describe('DialogConfirmComponent', () => {
   let component: DialogConfirmComponent;

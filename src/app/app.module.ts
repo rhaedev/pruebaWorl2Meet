@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderModule } from './core/header/header.module';
 import { HttpClientModule } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './core/http/mocked-heroes.service';
 

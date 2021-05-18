@@ -1,4 +1,4 @@
-<p>heroes-detail works!</p>
+<p>{{ heroTitle }}</p>
 
 <form [formGroup]="createForm" (ngSubmit)="createOrEdit()">
   <mat-form-field appearance="outline">
@@ -20,8 +20,8 @@
   <mat-form-field appearance="outline">
     <mat-label>Tipo</mat-label>
     <mat-select placeholder="Tipo" formControlName="type" id="type" required>
-      <mat-option *ngFor="let type of types" value="type">{{ type }}</mat-option>
+      <mat-option *ngFor="let typee of types" value="typee">{{ typee }}</mat-option>
     </mat-select>
   </mat-form-field>
-  <button mat-raised-button color="primary" [disabled]="!createForm.valid">Crear</button>
+  <button mat-raised-button color="primary" [disabled]="!createForm.valid">{{ buttonText }}</button>
 </form>

@@ -8,3 +8,17 @@ table {
   margin-bottom: 2em;
   align-items: flex-end;
 }
+
+.button {
+  border: none;
+  background-color: transparent;
+  margin: 0;
+  float: right;
+  &__red {
+      border: none;
+      background-color: transparent;
+      margin: 0;
+      float: right;
+      color: #e53935;
+  }
+}

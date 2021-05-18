@@ -19,7 +19,7 @@ import { RouterModule } from '@angular/router';
       { path: '', redirectTo: 'list' },
       { path: 'list', component: HeroesListComponent },
       { path: 'new', component: HeroesDetailComponent },
-      { path: ':id', component: HeroesDetailComponent },
+      { path: 'edit/:id', component: HeroesDetailComponent },
       { path: '**', redirectTo: 'list' }
     ])
   ]
